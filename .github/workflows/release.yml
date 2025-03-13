@@ -34,6 +34,7 @@ jobs:
         with:
           name: binaries
           path: .build/*
+          include-hidden-files: true
 
   push_to_registries:
     name: Push Docker image to multiple registries
@@ -71,6 +72,7 @@ jobs:
         with:
           name: binaries
           path: .build/
+          include-hidden-files: true
 
       - run: chmod +x .build/**/*
 
