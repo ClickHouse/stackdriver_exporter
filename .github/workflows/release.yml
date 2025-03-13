@@ -30,7 +30,7 @@ jobs:
       - name: Build
         run: ~/go/bin/promu -c .promu.yml crossbuild -v -p linux/amd64 -p linux/arm64 -p darwin/amd64 -p darwin/arm64
       - name: Upload Binaries
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: binaries
           path: .build/*
